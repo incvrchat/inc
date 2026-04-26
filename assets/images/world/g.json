@@ -5,32 +5,32 @@
     {
       "title": "1",
       "caption": "2k",
+      "aspect": 1.382,
+      "size": "M",
+      "split": false,
+      "plate": false,
+      "w": 1600,
+      "h": 1158
+    },
+    {
+      "title": "2",
+      "caption": "The New York Public Library\r\n",
+      "aspect": 0.693,
+      "size": "L",
+      "split": false,
+      "plate": true,
+      "w": 1108,
+      "h": 1600
+    },
+    {
+      "title": "3",
+      "caption": "2k\r\n",
       "aspect": 0.775,
       "size": "M",
       "split": false,
       "plate": false,
       "w": 1240,
       "h": 1600
-    },
-    {
-      "title": "2",
-      "caption": "The New York Public Library\r\n",
-      "aspect": 1.235,
-      "size": "L",
-      "split": false,
-      "plate": true,
-      "w": 1600,
-      "h": 1296
-    },
-    {
-      "title": "3",
-      "caption": "2k\r\n",
-      "aspect": 1.473,
-      "size": "M",
-      "split": false,
-      "plate": false,
-      "w": 760,
-      "h": 516
     },
     {
       "title": "4",
