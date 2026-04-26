@@ -1,4 +1,4 @@
-﻿---
+---
 title: About the Events Section
 date: 2026-04-18
 dateLabel: 2026.04.18
@@ -34,5 +34,3 @@ You can join the event via a VRChat world or group. Please check the individual 
 ## Updates
 
 Event information will be updated here on an ongoing basis. Be sure to check the INC group announcements for the latest news.
-
-

@@ -1,10 +1,10 @@
-﻿(() => {
+(() => {
   "use strict";
 
   document.addEventListener("DOMContentLoaded", () => {
     const assetBase = document.body.dataset.assetBase || "/inc/assets/";
 
-    // @@@ 螟ｧ蟄ｦ繝ｭ繧ｴ繧帝＆縺・ｦ∫ｴ縺ｫ隍・｣ｽ縺吶ｋ
+    // @@@ 大学ロゴを違う要素に複製する
     const targetLogo = document.querySelector(".logo-university img");
     const targetLogoPcImg = document.querySelector(".logo-university-pc img");
     if (targetLogo && targetLogoPcImg) {
@@ -12,7 +12,8 @@
       targetLogoPcImg.setAttribute("src", src);
     }
 
-    // @@@@ 繧ｳ繝ｳ繝・Φ繝・・繧ｻ繧ｯ繧ｷ繝ｧ繝ｳ繧定ｦ九※繧ｰ繝ｭ繝ｼ繝舌Ν繝翫ン縺ｫ鬆・岼繧堤函謌・    const globalNav = document.getElementById("nav-list");
+    // @@@@ コンテンツのセクションを見てグローバルナビに項目を生成
+    const globalNav = document.getElementById("nav-list");
     const sections = document.querySelectorAll("section");
     const dropLists = document.querySelectorAll(".tab-wrapp div");
     function createGlobalNav() {
@@ -72,7 +73,8 @@
       });
     }
 
-    // @@@@@ window繝ｪ繧ｵ繧､繧ｺ譎ゅ↓繝ｪ繝ｭ繝ｼ繝峨ｒ縺輔○繧・    const breakPoint = 769;
+    // @@@@@ windowリサイズ時にリロードをさせる
+    const breakPoint = 769;
     let resizeFlag;
     window.addEventListener(
       "load",
@@ -101,7 +103,7 @@
       );
     };
 
-    // 繝舌・繧ｬ繝ｼ繝｡繝九Η繝ｼ
+    // バーガーメニュー
     const trigger = document.getElementById("burger");
     const nav = document.getElementById("g-nav");
     const navInner = document.querySelector(".nav-inner");
@@ -220,27 +222,31 @@
     window.addEventListener("resize", closeMenuOnMobile);
     window.addEventListener("load", closeMenuOnMobile);
 
-    // @@@@ 繝翫ン繧ｲ繝ｼ繧ｷ繝ｧ繝ｳ繧偵そ繧ｯ繧ｷ繝ｧ繝ｳ縺ｮ繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ縺ｨ騾｣蜍輔＆縺帙※繧ｫ繝ｬ繝ｳ繝医ｒ莉倥￠譖ｿ縺医ｋ
-    // 蝓ｺ貅也せ縺ｮ貅門ｙ
+    // @@@@ ナビゲーションをセクションのスクロールと連動させてカレントを付け替える
+    // 基準点の準備
     var elemTop = [];
 
-    // 迴ｾ蝨ｨ蝨ｰ繧貞叙蠕励☆繧九◆繧√・險ｭ螳壹ｒ髢｢謨ｰ縺ｧ縺ｾ縺ｨ繧√ｋ
+    // 現在地を取得するための設定を関数でまとめる
     function PositionCheck() {
-      // header縺ｮ鬮倥＆繧貞叙蠕・      var header = document.getElementById("header");
+      // headerの高さを取得
+      var header = document.getElementById("header");
       var headerH = header.offsetHeight;
 
-      // .scroll-point繧ｯ繝ｩ繧ｹ縺後▽縺・◆繧ｨ繝ｪ繧｢縺ｮ菴咲ｽｮ繧貞叙蠕励☆繧玖ｨｭ螳・      var scrollPoints = document.querySelectorAll(".scroll-point");
+      // .scroll-pointクラスがついたエリアの位置を取得する設定
+      var scrollPoints = document.querySelectorAll(".scroll-point");
       scrollPoints.forEach(function (point, i) {
         var rect = point.getBoundingClientRect();
         elemTop[i] = Math.round(rect.top + window.scrollY - headerH);
       });
     }
 
-    // 繝翫ン繧ｲ繝ｼ繧ｷ繝ｧ繝ｳ縺ｫ迴ｾ蝨ｨ蝨ｰ縺ｮ繧ｯ繝ｩ繧ｹ繧偵▽縺代ｋ縺溘ａ縺ｮ險ｭ螳・    function ScrollAnime() {
-      // 繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ蛟､繧貞叙蠕・      var scroll = Math.round(window.scrollY);
+    // ナビゲーションに現在地のクラスをつけるための設定
+    function ScrollAnime() {
+      // スクロール値を取得
+      var scroll = Math.round(window.scrollY);
       var navItems = document.querySelectorAll("#g-nav .nav-default");
 
-      // 蜈ｨ縺ｦ縺ｮ繝翫ン繧ｲ繝ｼ繧ｷ繝ｧ繝ｳ縺ｮ迴ｾ蝨ｨ蝨ｰ繧ｯ繝ｩ繧ｹ繧帝勁蜴ｻ
+      // 全てのナビゲーションの現在地クラスを除去
       navItems.forEach(function (item) {
         item.classList.remove("current");
       });
@@ -256,7 +262,7 @@
       }
     }
 
-    // 繝翫ン繧ｲ繝ｼ繧ｷ繝ｧ繝ｳ繧偵け繝ｪ繝・け縺励◆髫帙・繧ｹ繝繝ｼ繧ｹ繧ｹ繧ｯ繝ｭ繝ｼ繝ｫ
+    // ナビゲーションをクリックした際のスムーススクロール
     var navLinks = document.querySelectorAll("#g-nav a");
     navLinks.forEach(function (link) {
       link.addEventListener("click", function (event) {
@@ -293,7 +299,7 @@
       PositionCheck();
     });
 
-    // @@@@@ 繧｢繧ｳ繝ｼ繝・ぅ繧ｪ繝ｳ
+    // @@@@@ アコーディオン
     const accordionButtons = document.querySelectorAll(".nav-drop-main");
 
     accordionButtons.forEach((accordionBtn, index) => {
@@ -324,7 +330,8 @@
       });
     });
 
-    // @@@@ 繧ｿ繝悶せ繝ｩ繧､繝・    const swiperTabs = document.querySelectorAll(".mySwiper .swiper-slide");
+    // @@@@ タブスライド
+    const swiperTabs = document.querySelectorAll(".mySwiper .swiper-slide");
     const hasSwiper =
       typeof Swiper !== "undefined" &&
       document.querySelector(".mySwiper") &&
@@ -439,14 +446,15 @@
     //   });
     // }
 
-    // initSlideMoreButton(0); // 蛻晄悄蛹・
+    // initSlideMoreButton(0); // 初期化
+
     // initSlideMoreButton(swiper2.activeIndex);
 
     // function initSlideMoreButton(slideIndex) {
     //   const currentSlide = swiper2.slides[slideIndex];
     //   const loadMoreButton = currentSlide.querySelector(".load-more");
     //   const listItems = currentSlide.querySelectorAll(".list-item");
-    //   const itemsToShow = 6; // 1蝗槭↓陦ｨ遉ｺ縺吶ｋ繧｢繧､繝・Β謨ｰ
+    //   const itemsToShow = 6; // 1回に表示するアイテム数
     //   let currentItemIndex = itemsToShow;
 
     //   if (listItems.length <= itemsToShow) {
@@ -463,7 +471,7 @@
     //     }
     //   }
 
-    //   toggleListItems(); // 蛻晄悄陦ｨ遉ｺ
+    //   toggleListItems(); // 初期表示
 
     //   loadMoreButton.addEventListener("click", function () {
     //     currentItemIndex += itemsToShow;
@@ -474,7 +482,7 @@
     //   });
     // }
 
-    // @@@@ 繧ゅ▲縺ｨ隕九ｋ繝懊ち繝ｳ
+    // @@@@ もっと見るボタン
     function setupMoreButton(sectionSelector, moreNum) {
       var section = document.querySelector(sectionSelector);
       if (!section) {
@@ -515,7 +523,7 @@
     setupMoreButton("#events", 4);
     setupMoreButton("#member", 2);
 
-    // @@@@@ 繝｡繝ｼ繝ｫ縺ｮ繧ｳ繝斐・
+    // @@@@@ メールのコピー
     const copyButton = document.getElementById("contact-btn");
     const tagText = document.getElementById("tagText");
     const message = document.getElementById("message");
@@ -537,7 +545,7 @@
 
         messageActive();
       } catch (error) {
-        console.error("繧ｯ繝ｪ繝・・繝懊・繝峨∈縺ｮ繧ｳ繝斐・縺ｫ螟ｱ謨励＠縺ｾ縺励◆:", error);
+        console.error("クリップボードへのコピーに失敗しました:", error);
       }
     }
 
@@ -549,4 +557,3 @@
     }
   });
 })();
-

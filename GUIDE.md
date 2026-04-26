@@ -1,4 +1,4 @@
-﻿# Guide
+# Guide
 
 This is the working guide for this repository.
 It is meant for AI editors and human maintainers who need to update the current `inc` site safely.
@@ -211,8 +211,8 @@ Do not casually rename these.
 The current top-page sections are:
 
 - `NEWS`
-- `繝ｯ繝ｼ繝ｫ繝画ｦりｦ・/ World Overview`
-- `髢｢騾｣諠・ｱ / Resources`
+- `ワールド概要 / World Overview`
+- `関連情報 / Resources`
 - `Contact`
 
 The former `Rules / Events / Groups` tab section is intentionally not present on the top page right now.
@@ -362,6 +362,3 @@ As of the current repo state:
 - GitHub Actions generates pages during deployment
 - `Resources` is now the preferred entry point for documentation and related links
 - `Contact` is still placeholder content
-
-
-

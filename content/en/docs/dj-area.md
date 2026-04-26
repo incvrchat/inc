@@ -1,4 +1,4 @@
-﻿---
+---
 title: For those who wish to use the DJ area
 date: 2026-04-19
 dateLabel: 2026.04.19
@@ -84,7 +84,7 @@ Users added as Admins can enter the Admin Room and operate live-specific feature
 This is a monitor installed on the wall of the DJ area that projects the currently playing video.
 
 Unlike a standard rectangular monitor, it features a unique projection format consisting of multiple overlapping, curved, band-like layers.
-Tessellation is applied, extracting the red component from the video窶冱 RGB values to create an effect where the mesh in high-luminance areas protrudes.
+Tessellation is applied, extracting the red component from the video’s RGB values to create an effect where the mesh in high-luminance areas protrudes.
 
 **Suitable Content**
 - Video visualizers
@@ -97,6 +97,3 @@ Tessellation is applied, extracting the red component from the video窶冱 RGB v
 If no video is playing, the wall shader automatically turns off.
 
 ![](/inc/assets/images/content/docs/dj-area/VRChat_2025-10-28_02-43-11.933_1080x1920.png){width=500}
-
-
-
