@@ -1,0 +1,19 @@
+{
+  "categories": [
+    {
+      "id": "user-guide",
+      "ja": "利用案内",
+      "en": "Guidelines"
+    },
+    {
+      "id": "facility-guide",
+      "ja": "施設・機能ガイド",
+      "en": "World & Feature Guide"
+    },
+    {
+      "id": "events",
+      "ja": "イベントガイド",
+      "en": "Event Guide"
+    }
+  ]
+}
