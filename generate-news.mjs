@@ -294,7 +294,7 @@ function buildTranslationMap(entries) {
 
 function renderNewsItem(entry, lang) {
   const { topArticlePrefix, topAssetPrefix, topCtaLabel } = NEWS_LANG_CONFIG[lang];
-  const href = `${topArticlePrefix}/${entry.slug}.html`;
+  const href = `${topArticlePrefix}/${entry.slug}`;
 
   return [
     '            <li class="news-item is-link" data-more="">',
@@ -315,7 +315,7 @@ const DEFAULT_THUMB_REL = "images/ico/grouplink_icon.png";
 
 function renderEventItem(entry, lang) {
   const { topArticlePrefix, topAssetPrefix, topCtaLabel } = EVENT_LANG_CONFIG[lang];
-  const href = `${topArticlePrefix}/${entry.slug}.html`;
+  const href = `${topArticlePrefix}/${entry.slug}`;
   const imageSrc = entry.image
     ? pageAssetPath(entry.image, EVENT_LANG_CONFIG[lang])
     : `${topAssetPrefix}${DEFAULT_THUMB_REL}`;
@@ -343,7 +343,7 @@ function renderEventItem(entry, lang) {
 
 function renderDocItem(entry, lang) {
   const { topArticlePrefix, topAssetPrefix } = DOC_LANG_CONFIG[lang];
-  const href = `${topArticlePrefix}/${entry.slug}.html`;
+  const href = `${topArticlePrefix}/${entry.slug}`;
   const imageSrc = entry.image
     ? pageAssetPath(entry.image, DOC_LANG_CONFIG[lang])
     : `${topAssetPrefix}${DEFAULT_THUMB_REL}`;
@@ -395,7 +395,7 @@ function renderArticleBreadcrumb(entry, dirName, categories) {
       href: `../resources/#docs-${entry.category}`,
     });
   }
-  items.push({ label: entry.title, href: `./${entry.slug}.html` });
+  items.push({ label: entry.title, href: `./${entry.slug}` });
   return [
     '<div class="article-breadcrumb" role="navigation" aria-label="Article location">',
     items
@@ -530,11 +530,11 @@ function renderArticlePage(entry, pair, template, dirName, langConfig, categorie
     HOME_LINK: entryLangConfig.homeLink,
     HEADER_HOME_LINK: entryLangConfig.headerHomeLink,
     JP_LINK: isEnglish
-      ? `../../${dirName}/${pair.ja.slug}.html`
-      : `../${dirName}/${entry.slug}.html`,
+      ? `../../${dirName}/${pair.ja.slug}`
+      : `../${dirName}/${entry.slug}`,
     EN_LINK: isEnglish
-      ? `./${entry.slug}.html`
-      : `../en/${dirName}/${counterpart.slug}.html`,
+      ? `./${entry.slug}`
+      : `../en/${dirName}/${counterpart.slug}`,
     ARTICLE_BREADCRUMB: renderArticleBreadcrumb(entry, dirName, categories),
     FALLBACK_MARKDOWN: escapeScriptText(entry.body),
   };
