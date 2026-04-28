@@ -16,11 +16,17 @@ order: 1
 
 INC aims to be a gathering place where people interested in various fields—such as academia, technology, art, and music—can come together and engage in spontaneous interaction.
 
+![INC Main Hall](/inc/assets/images/content/docs/スクリーンショット 2026-04-29 001303.png)
+
 ## About the Space
 
 It is a serene space inspired by real-world architectural concepts. The interior features an open, interconnected layout with no partitioned rooms, creating an airy design.
 
 The space is composed of integrated areas designed for diverse purposes, including a garden, main hall, underground gallery, and DJ area.
+
+![Entrance Area](/inc/assets/images/content/docs/スクリーンショット 2026-04-29 001702.png)
+![Garden Area](/inc/assets/images/content/docs/スクリーンショット 2026-04-29 001503.png)
+![DJ Area](/inc/assets/images/content/docs/dj-area/VRChat_2026-04-19_15-30-45.878_2560x1440.png)
 
 ## About Operations
 
