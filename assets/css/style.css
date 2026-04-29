@@ -294,10 +294,16 @@ nav p {
 }
 
 .article-prose h2 {
+  gap: 10px;
   font-size: 28px;
   font-weight: 700;
   padding-bottom: 8px;
   border-bottom: 1px solid #d4dbe1
+}
+
+.article-prose h2:before {
+  width: 5px;
+  height: 34px
 }
 
 .article-prose h3 {
@@ -305,7 +311,8 @@ nav p {
   font-weight: 700;
   color: #3f4a54;
   border-left: 4px solid #d4dbe1;
-  padding-left: 12px
+  padding-left: 12px;
+  white-space: nowrap
 }
 
 .article-prose p,
@@ -572,20 +579,25 @@ section:nth-child(odd) {
 }
 
 h2 {
+  display: flex;
+  align-items: center;
+  gap: 12px;
   font-size: 2pc;
   font-weight: 500;
-  margin-left: -3px;
   margin-bottom: 36px
 }
 
-h2:after {
+h2:before {
   content: "";
   display: block;
-  width: 3pc;
-  height: 6px;
+  width: 6px;
+  height: 3pc;
+  flex: 0 0 auto;
   background-color: var(--color-key);
-  margin-top: 8px;
-  margin-left: 3px
+}
+
+h2:after {
+  display: none
 }
 
 .news-li-wrapp {
@@ -1001,7 +1013,7 @@ h4 {
   color: var(--color-white)
 }
 
-#contact h2:after {
+#contact h2:before {
   background-color: var(--color-white)
 }
 
@@ -1439,6 +1451,11 @@ footer {
     font-size: 24px
   }
 
+  .article-prose h2:before {
+    width: 4px;
+    height: 30px
+  }
+
   .article-prose h3 {
     font-size: 18px
   }
@@ -1496,13 +1513,13 @@ footer {
   }
 
   h2 {
+    gap: 14px;
     font-size: 45px
   }
 
-  h2:after {
-    width: 60px;
-    height: 9px;
-    margin-top: 10px
+  h2:before {
+    width: 9px;
+    height: 60px
   }
 
   .news-li-wrapp {
@@ -2156,6 +2173,14 @@ footer {
 .article-nav-level-3 {
   padding-left: 40px;
   font-size: 13px
+}
+
+.article-nav-level-3 a,
+.article-nav-level-4 a,
+.article-nav-level-5 a,
+.article-nav-level-6 a {
+  overflow-wrap: normal;
+  white-space: nowrap
 }
 
 .article-nav-level-4 {
