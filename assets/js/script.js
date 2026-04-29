@@ -18,6 +18,19 @@
     const dropLists = document.querySelectorAll(".tab-wrapp div");
     function createGlobalNav() {
       const navList = document.createElement("ul");
+      const homeLink = document.body.dataset.homeLink;
+      if (homeLink) {
+        const homeItem = document.createElement("li");
+        homeItem.className = "nav-default";
+        const homeAnchor = document.createElement("a");
+        homeAnchor.href = homeLink;
+        homeAnchor.textContent =
+          document.body.dataset.homeLabel ||
+          (document.documentElement.lang === "ja" ? "ホームへ戻る" : "Back to Home");
+        homeItem.appendChild(homeAnchor);
+        navList.appendChild(homeItem);
+      }
+
       sections.forEach((section, index) => {
         const sectionTitle = section.getAttribute("data-title");
         const sectionUniqeClass = section.getAttribute("data-class");
