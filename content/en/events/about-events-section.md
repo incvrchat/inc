@@ -1,7 +1,7 @@
 ---
 title: About the Events Section
-date: 2026-04-18
-dateLabel: 2026.04.18
+date: 2026-04-30
+dateLabel: 2026.04.30
 description: INC plans to host a variety of performances and events including music, talks, and exhibitions. Check this page for upcoming events.
 slug: about-events-section
 lang: en

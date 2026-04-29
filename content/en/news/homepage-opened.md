@@ -1,7 +1,7 @@
 ---
 title: Website Launched
-date: 2026-04-12
-dateLabel: 2026.04.12
+date: 2026-04-30
+dateLabel: 2026.04.30
 description: Our website is now live. We will keep updating this page with the latest information about INC.
 slug: homepage-opened
 lang: en

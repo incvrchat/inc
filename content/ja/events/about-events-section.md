@@ -1,7 +1,7 @@
 ---
 title: 公演・イベント情報について
-date: 2026-04-18
-dateLabel: 2026.04.18
+date: 2026-04-30
+dateLabel: 2026.04.30
 description: INCでは音楽・トーク・展示などの公演・イベントを随時開催予定です。このページでは開催予定のイベントをまとめて確認できます。
 slug: about-events-section
 lang: ja

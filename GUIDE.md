@@ -89,8 +89,8 @@ Each news Markdown file should start with front matter like this:
 ```yaml
 ---
 title: Website Launched
-date: 2026-04-12
-dateLabel: 2026.04.12
+date: 2026-04-30
+dateLabel: 2026.04.30
 description: Announcement for the launch of the INC website.
 slug: homepage-opened
 lang: en
@@ -106,8 +106,8 @@ Event Markdown files use the same required fields, plus an optional `image` fiel
 ```yaml
 ---
 title: Opening Event
-date: 2026-04-12
-dateLabel: 2026.04.12
+date: 2026-04-30
+dateLabel: 2026.04.30
 description: Details for the opening event.
 slug: opening-event
 lang: en
