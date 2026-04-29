@@ -1,7 +1,7 @@
 ---
 title: DJエリアを利用したい方へ
-date: 2026-04-19
-dateLabel: 2026.04.19
+date: 2026-04-30
+dateLabel: 2026.04.30
 description: 権限を与えられているユーザーはDJエリアを多機能に利用することができます。
 slug: dj-area
 lang: ja

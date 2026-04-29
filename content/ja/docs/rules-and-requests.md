@@ -1,7 +1,7 @@
 ---
 title: ルールとお願い
-date: 2026-04-21
-dateLabel: 2026.04.21
+date: 2026-04-30
+dateLabel: 2026.04.30
 description: INCのルールはVRChatコミュニティガイドラインに準拠します。
 slug: rules-and-requests
 lang: ja

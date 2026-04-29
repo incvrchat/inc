@@ -11,7 +11,7 @@ summary: Our website is now live. We will keep updating this page with the lates
 
 # Website Launched
 
-Published: April 12, 2026
+Published: April 30, 2026
 
 ## Announcement
 

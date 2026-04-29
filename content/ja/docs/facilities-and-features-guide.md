@@ -1,7 +1,7 @@
 ---
 title: 施設・機能ガイド
-date: 2026-04-21
-dateLabel: 2026.04.21
+date: 2026-04-30
+dateLabel: 2026.04.30
 description: ワールド内の各エリアの紹介や、作業・交流に役立つ便利なシステム・メニューの使い方を解説します。
 slug: facilities-and-features-guide
 lang: ja

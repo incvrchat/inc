@@ -1,7 +1,7 @@
 ---
 title: メニュー機能の紹介
-date: 2026-04-21
-dateLabel: 2026.04.21
+date: 2026-04-30
+dateLabel: 2026.04.30
 description: メニューを活用することで、INC内でのユーザー設定が可能です。
 slug: introduction-to-menu-features
 lang: ja

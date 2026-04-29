@@ -1,7 +1,7 @@
 ---
 title: Rules and Requests
-date: 2026-04-21
-dateLabel: 2026.04.21
+date: 2026-04-30
+dateLabel: 2026.04.30
 description: INC's rules comply with the VRChat Community Guidelines.
 slug: rules-and-requests
 lang: en

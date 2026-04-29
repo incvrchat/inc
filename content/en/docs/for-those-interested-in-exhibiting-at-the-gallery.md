@@ -1,7 +1,7 @@
 ---
 title: For those interested in exhibiting at the gallery
-date: 2026-04-21
-dateLabel: 2026.04.21
+date: 2026-04-30
+dateLabel: 2026.04.30
 description: Here is an introduction to the gallery area for exhibitions.
 slug: for-those-interested-in-exhibiting-at-the-gallery
 lang: en

@@ -1,7 +1,7 @@
 ---
 title: For those who wish to use the DJ area
-date: 2026-04-19
-dateLabel: 2026.04.19
+date: 2026-04-30
+dateLabel: 2026.04.30
 description: Authorized users can make full use of the DJ area.
 slug: dj-area
 lang: en

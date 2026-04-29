@@ -1,7 +1,7 @@
 ---
 title: ポスターを掲載したい方へ
-date: 2026-04-21
-dateLabel: 2026.04.21
+date: 2026-04-30
+dateLabel: 2026.04.30
 description: INCではワールド内に掲載させていただくポスターを募集いたします。
 slug: for-those-who-wish-to-post-a-poster
 lang: ja

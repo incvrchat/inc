@@ -1,7 +1,7 @@
 ---
 title: What is INC?
-date: 2026-04-21
-dateLabel: 2026.04.21
+date: 2026-04-30
+dateLabel: 2026.04.30
 description: This is a permanent gathering place in VRChat for Japanese speakers.
 slug: what-is-inc
 lang: en

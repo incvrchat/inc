@@ -1,7 +1,7 @@
 ---
 title: For those who wish to post a poster
-date: 2026-04-21
-dateLabel: 2026.04.21
+date: 2026-04-30
+dateLabel: 2026.04.30
 description: INC is currently accepting submissions for posters to be displayed in the World.
 slug: for-those-who-wish-to-post-a-poster
 lang: en

@@ -1,7 +1,7 @@
 ---
 title: ギャラリーに展示したい方へ
-date: 2026-04-21
-dateLabel: 2026.04.21
+date: 2026-04-30
+dateLabel: 2026.04.30
 description: 展示のためのギャラリーエリアについてご紹介します。
 slug: for-those-interested-in-exhibiting-at-the-gallery
 lang: ja

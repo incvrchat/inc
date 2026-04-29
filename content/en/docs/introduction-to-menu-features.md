@@ -1,7 +1,7 @@
 ---
 title: Introduction to Menu Features
-date: 2026-04-21
-dateLabel: 2026.04.21
+date: 2026-04-30
+dateLabel: 2026.04.30
 description: You can configure user settings within INC using the menu.
 slug: introduction-to-menu-features
 lang: en

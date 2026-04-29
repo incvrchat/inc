@@ -1,7 +1,7 @@
 ---
 title: INCとは
-date: 2026-04-21
-dateLabel: 2026.04.21
+date: 2026-04-30
+dateLabel: 2026.04.30
 description: VRChat上に常設されている日本語話者向けの集会場ワールドです。
 slug: what-is-inc
 lang: ja

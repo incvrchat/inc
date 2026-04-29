@@ -1,7 +1,7 @@
 ---
 title: Facilities and Features Guide
-date: 2026-04-21
-dateLabel: 2026.04.21
+date: 2026-04-30
+dateLabel: 2026.04.30
 description: We’ll introduce the various areas within the World and explain how to use the convenient systems and menus that will help you with your tasks and interactions.
 slug: facilities-and-features-guide
 lang: en
