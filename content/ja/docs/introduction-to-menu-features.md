@@ -16,7 +16,7 @@ order: 7
 
 ## メニューの起動方法
 
-[画像]
+![テスト画像：メニューの起動方法](/inc/assets/images/sample-ph-01.png){width=720px}
 
 各環境において、以下の方法でメニューを起動することができます。
 
@@ -28,7 +28,7 @@ VRの場合：Questコントローラーの右トリガーを2回押しするこ
 
 ### 機能のOn/Off
 
-[画像]
+![テスト画像：機能のOn/Off](/inc/assets/images/sample-ph-02.png){width=720px}
 
 「機能のOn/Off」では、ワールドの軽量化やコライダー等を設定可能です。
 
@@ -40,7 +40,7 @@ VRの場合：Questコントローラーの右トリガーを2回押しするこ
 
 ### マップ
 
-[画像]
+![テスト画像：マップ](/inc/assets/images/worldthumb.png){width=720px}
 
 「マップ」では、自分や他のユーザーの位置確認やワールド内のテレポートが可能です。
 
@@ -52,7 +52,7 @@ VRの場合：Questコントローラーの右トリガーを2回押しするこ
 
 ### QvPen呼び出し
 
-[画像]
+![テスト画像：QvPen呼び出し](/inc/assets/images/sample-mv.png){width=720px}
 
 「QvPen呼び出し」では、QvPenや消しゴムの呼び出しが可能です。
 
@@ -60,13 +60,13 @@ VRの場合：Questコントローラーの右トリガーを2回押しするこ
 
 ### サウンド設定
 
-[画像]
+![テスト画像：サウンド設定](/inc/assets/images/world/p01.png){width=720px}
 
 「サウンド設定」では、ワールド内のBGMや環境音がOn/Offできます。
 
 ### システム設定
 
-[画像]
+![テスト画像：システム設定](/inc/assets/images/world/p02.png){width=720px}
 
 「システム設定」では、言語設定やメニューのサイズの変更が可能です。
 

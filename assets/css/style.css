@@ -1097,18 +1097,40 @@ h4 {
   height: 280px
 }
 
-footer {
+footer,
+.site-footer {
   font-weight: 700;
-  padding-top: 30px;
-  padding-bottom: 55px
+  padding: 34px 24px 48px;
+  background: linear-gradient(180deg, #fbfcff 0%, #f3f6fb 100%);
+  border-top: 1px solid #d4dbe1
+}
+
+.site-footer-inner {
+  width: min(100%, 980px);
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px
 }
 
 .footer-copyright {
-  margin-top: 13px;
-  font-size: 9pt;
+  font-size: 12px;
+  line-height: 1.6;
   color: var(--color-gray);
   display: flex;
-  justify-content: center
+  justify-content: center;
+  text-align: center
+}
+
+body[data-markdown-src$="/events/about-events-section.md"] .site-footer,
+body[data-markdown-src$="/docs/rules-and-requests.md"] .site-footer,
+body[data-markdown-src$="/docs/for-those-interested-in-exhibiting-at-the-gallery.md"] .site-footer {
+  margin-top: 50px
+}
+
+body[data-markdown-src$="/docs/rules-and-requests.md"] .site-footer {
+  margin-top: 166px
 }
 
 
@@ -1509,8 +1531,8 @@ footer {
   }
 
   footer {
-    padding-top: 50px;
-    padding-bottom: 75px;
+    padding-top: 52px;
+    padding-bottom: 70px;
     margin-left: 250px
   }
 
@@ -1818,11 +1840,11 @@ footer {
   }
 
   .footer-nav {
-    margin-bottom: 20px
+    margin-bottom: 0
   }
 
   .footer-nav-list {
-    gap: 32px;
+    gap: 10px;
     font-size: 15px
   }
 
@@ -2125,24 +2147,43 @@ footer {
 }
 
 /* ---- Footer nav ---- */
-.footer-nav {
+.site-footer .footer-nav {
+  position: static;
   display: flex;
   justify-content: center;
-  margin-bottom: 16px
+  width: 100%
 }
 
 .footer-nav-list {
   display: flex;
-  gap: 24px;
+  gap: 8px;
   flex-wrap: wrap;
   justify-content: center;
   list-style: none;
   font-size: 14px;
-  font-weight: 600
+  font-weight: 700
 }
 
 .footer-nav-list a {
-  color: var(--color-link)
+  display: inline-flex;
+  align-items: center;
+  min-height: 38px;
+  padding: 9px 16px;
+  border: 1px solid #d4dbe1;
+  border-radius: 999px;
+  color: var(--color-link);
+  background-color: var(--color-white);
+  box-shadow: 0 8px 20px rgba(34,105,211,.07);
+  text-decoration: none;
+  transition: color .2s, background-color .2s, border-color .2s, transform .2s
+}
+
+.footer-nav-list a:hover,
+.footer-nav-list a:focus-visible {
+  color: var(--color-white);
+  border-color: var(--color-key);
+  background-color: var(--color-key);
+  transform: translateY(-1px)
 }
 
 .footer-license {

@@ -535,6 +535,13 @@ function renderArticlePage(entry, pair, template, dirName, langConfig, categorie
     EN_LINK: isEnglish
       ? `./${entry.slug}`
       : `../en/${dirName}/${counterpart.slug}`,
+    FOOTER_HOME_LINK: isEnglish ? "../../" : "../",
+    FOOTER_NEWS_LINK: isEnglish ? "../../#news" : "../#news",
+    FOOTER_EVENTS_LINK: isEnglish ? "../../#events" : "../#events",
+    FOOTER_RESOURCES_LINK: isEnglish ? "../../resources/" : "../resources/",
+    FOOTER_ENGLISH_LINK: isEnglish
+      ? `./${entry.slug}`
+      : `../en/${dirName}/${counterpart.slug}`,
     ARTICLE_BREADCRUMB: renderArticleBreadcrumb(entry, dirName, categories),
     FALLBACK_MARKDOWN: escapeScriptText(entry.body),
   };

@@ -19,7 +19,7 @@
       @import url("https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@400;500;600;700&display=swap");
     </style>
     <link rel="stylesheet" href="{{ASSET_BASE}}css/destyle.css" />
-    <link rel="stylesheet" href="{{ASSET_BASE}}css/style.css?v=20260422-breadcrumb" />
+    <link rel="stylesheet" href="{{ASSET_BASE}}css/style.css?v=20260429-footer" />
     <script src="{{ASSET_BASE}}js/article.js"></script>
   </head>
 
@@ -85,9 +85,20 @@
 {{FALLBACK_MARKDOWN}}
     </script>
 
-    <footer>
-      <div class="footer-copyright">
-        Copyright (C) INC. All Rights Reserved.
+    <footer class="site-footer">
+      <div class="site-footer-inner">
+        <nav class="footer-nav" role="navigation" aria-label="サイトナビゲーション">
+          <ul class="footer-nav-list">
+            <li><a href="{{FOOTER_HOME_LINK}}">ホーム</a></li>
+            <li><a href="{{FOOTER_NEWS_LINK}}">重要なお知らせ</a></li>
+            <li><a href="{{FOOTER_EVENTS_LINK}}">公演・イベント</a></li>
+            <li><a href="{{FOOTER_RESOURCES_LINK}}">関連情報</a></li>
+            <li><a href="{{FOOTER_ENGLISH_LINK}}">English</a></li>
+          </ul>
+        </nav>
+        <div class="footer-copyright">
+          Copyright © INC. All Rights Reserved.
+        </div>
       </div>
     </footer>
   </body>
