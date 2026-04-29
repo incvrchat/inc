@@ -150,6 +150,24 @@
     return `<div class="article-image-row">${images.join("")}</div>`;
   }
 
+  function parseXProfileUrl(line) {
+    const match = line
+      .trim()
+      .match(/^https?:\/\/(?:www\.)?(?:x|twitter)\.com\/([A-Za-z0-9_]{1,15})\/?$/);
+    return match ? match[1] : "";
+  }
+
+  function renderXProfileEmbed(username) {
+    const href = `https://twitter.com/${username}?ref_src=twsrc%5Etfw`;
+    return [
+      '<div class="article-x-embed">',
+      `<a class="twitter-timeline" data-height="560" href="${escapeAttribute(
+        href
+      )}">Tweets by ${escapeHtml(username)}</a>`,
+      "</div>",
+    ].join("");
+  }
+
   function isImageRowFence(line) {
     return /^:::\s*(?:images?|image-row|gallery)\s*$/i.test(line.trim());
   }
@@ -163,8 +181,16 @@
     html = html.replace(/`([^`]+)`/g, "<code>$1</code>");
     html = html.replace(
       /\[([^\]]+)\]\(([^)]+)\)/g,
-      (_, label, href) =>
-        `<a href="${escapeAttribute(href)}" target="_blank" rel="noreferrer">${label}</a>`
+      (_, label, href) => {
+        const classAttribute = /^https?:\/\/(?:www\.)?(?:x|twitter)\.com\//i.test(
+          href
+        )
+          ? ' class="article-x-button"'
+          : "";
+        return `<a${classAttribute} href="${escapeAttribute(
+          href
+        )}" target="_blank" rel="noreferrer">${label}</a>`;
+      }
     );
     html = html.replace(/~~([^~]+)~~/g, "<del>$1</del>");
     html = html.replace(/\*\*([^*]+)\*\*/g, "<strong>$1</strong>");
@@ -317,6 +343,15 @@
         flushList();
         flushQuote();
         html.push("<hr />");
+        continue;
+      }
+
+      const xProfileUsername = parseXProfileUrl(line);
+      if (xProfileUsername) {
+        flushParagraph();
+        flushList();
+        flushQuote();
+        html.push(renderXProfileEmbed(xProfileUsername));
         continue;
       }
 
@@ -630,6 +665,27 @@
     }
   }
 
+  function setupXEmbeds(root) {
+    if (!root || !root.querySelector(".twitter-timeline")) {
+      return;
+    }
+
+    if (window.twttr && window.twttr.widgets) {
+      window.twttr.widgets.load(root);
+      return;
+    }
+
+    if (document.querySelector('script[src="https://platform.twitter.com/widgets.js"]')) {
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.async = true;
+    script.src = "https://platform.twitter.com/widgets.js";
+    script.charset = "utf-8";
+    document.body.appendChild(script);
+  }
+
   document.addEventListener("DOMContentLoaded", async () => {
     const body = document.body;
     const markdownSrc = body.dataset.markdownSrc;
@@ -665,6 +721,7 @@
     }
 
     articleRoot.innerHTML = renderMarkdown(stripFrontMatter(markdown));
+    setupXEmbeds(articleRoot);
 
     const headings = assignHeadingIds(articleRoot);
     const trackedItems = buildMenu(headings, navRoot, homeLink, homeLabel);
