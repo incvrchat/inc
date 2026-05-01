@@ -1,0 +1,14 @@
+{
+  "updates": [
+    {
+      "version": "ver1.02",
+      "date": "2026-05-02",
+      "content": "・ディレクショナルライトライトのレイヤーを修正\n・DJエリアアバターライトのローカルスイッチをWIMに追加\n・ReSyncボタンの追加\n・AdminRoomとGuestRoomを分離、ボタンを追加"
+    },
+    {
+      "version": "ver1.01",
+      "date": "2026-05-01",
+      "content": "・動画プレイヤーの問題を修正"
+    }
+  ]
+}
