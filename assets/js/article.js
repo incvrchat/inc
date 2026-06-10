@@ -187,9 +187,14 @@
         )
           ? ' class="article-x-button"'
           : "";
+        // 外部リンクのみ別タブで開く（サイト内リンクは同一タブで遷移）
+        const isExternal = /^https?:\/\//i.test(href);
+        const targetAttribute = isExternal
+          ? ' target="_blank" rel="noreferrer"'
+          : "";
         return `<a${classAttribute} href="${escapeAttribute(
           href
-        )}" target="_blank" rel="noreferrer">${label}</a>`;
+        )}"${targetAttribute}>${label}</a>`;
       }
     );
     html = html.replace(/~~([^~]+)~~/g, "<del>$1</del>");

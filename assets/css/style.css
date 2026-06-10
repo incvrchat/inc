@@ -21,6 +21,19 @@ html {
   scroll-behavior: smooth
 }
 
+a:focus-visible,
+button:focus-visible {
+  outline: 2px solid var(--color-key);
+  outline-offset: 2px;
+  border-radius: 2px
+}
+
+/* 固定ヘッダー分だけアンカー位置をずらす */
+.scroll-point,
+section[id] {
+  scroll-margin-top: 90px
+}
+
 img {
   width: 100%
 }
@@ -835,7 +848,22 @@ h3 {
   text-decoration: none;
   font-size: 14px;
   font-weight: 700;
-  background-color: var(--color-white)
+  background-color: var(--color-white);
+  transition: color .2s, background-color .2s, border-color .2s
+}
+
+.resources-site-nav a:hover,
+.resources-site-nav a:focus-visible {
+  color: var(--color-white);
+  border-color: var(--color-key);
+  background-color: var(--color-key)
+}
+
+.about-lead {
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 2;
+  max-width: 760px
 }
 
 .resources-card-link {
@@ -872,6 +900,10 @@ h3 {
 
 .article-breadcrumb span {
   color: var(--color-gray)
+}
+
+.article-breadcrumb .article-breadcrumb-current {
+  color: var(--color-text)
 }
 
 .resources-note {

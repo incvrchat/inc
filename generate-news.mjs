@@ -324,7 +324,7 @@ function renderEventItem(entry, lang) {
     '            <li class="event-card" data-more="">',
     `              <a href="${href}" class="event-card-inner">`,
     '                <div class="event-card-img">',
-    `                  <img src="${escapeHtml(imageSrc)}" alt="${escapeHtml(entry.title)}" />`,
+    `                  <img src="${escapeHtml(imageSrc)}" alt="${escapeHtml(entry.title)}" loading="lazy" />`,
     "                </div>",
   ];
 
@@ -395,11 +395,15 @@ function renderArticleBreadcrumb(entry, dirName, categories) {
       href: `../resources/#docs-${entry.category}`,
     });
   }
-  items.push({ label: entry.title, href: `./${entry.slug}` });
+  items.push({ label: entry.title });
   return [
     '<div class="article-breadcrumb" role="navigation" aria-label="Article location">',
     items
-      .map((item) => `<a href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a>`)
+      .map((item) =>
+        item.href
+          ? `<a href="${escapeHtml(item.href)}">${escapeHtml(item.label)}</a>`
+          : `<span class="article-breadcrumb-current" aria-current="page">${escapeHtml(item.label)}</span>`
+      )
       .join('<span aria-hidden="true">/</span>'),
     "</div>",
   ].join("");
@@ -515,6 +519,12 @@ async function updateTopPageEvents(entries, lang) {
   await writeFile(topPagePath, updated, "utf8");
 }
 
+const HEADER_SUB_LABELS = {
+  news: "INC NEWS",
+  events: "INC EVENTS",
+  docs: "INC DOCS",
+};
+
 function renderArticlePage(entry, pair, template, dirName, langConfig, categories = []) {
   const isEnglish = entry.lang === "en";
   const counterpart = isEnglish ? pair.ja : pair.en;
@@ -529,19 +539,28 @@ function renderArticlePage(entry, pair, template, dirName, langConfig, categorie
     MARKDOWN_SRC: `${entryLangConfig.markdownPrefix}/${entry.slug}.md`,
     HOME_LINK: entryLangConfig.homeLink,
     HEADER_HOME_LINK: entryLangConfig.headerHomeLink,
+    HEADER_SUB_LABEL: HEADER_SUB_LABELS[dirName] || "INC",
+    MENU_TOGGLE_LABEL: isEnglish ? "Toggle menu" : "メニューを開閉する",
     JP_LINK: isEnglish
       ? `../../${dirName}/${pair.ja.slug}`
       : `../${dirName}/${entry.slug}`,
     EN_LINK: isEnglish
       ? `./${entry.slug}`
       : `../en/${dirName}/${counterpart.slug}`,
-    FOOTER_HOME_LINK: isEnglish ? "../../" : "../",
-    FOOTER_NEWS_LINK: isEnglish ? "../../#news" : "../#news",
-    FOOTER_EVENTS_LINK: isEnglish ? "../../#events" : "../#events",
-    FOOTER_RESOURCES_LINK: isEnglish ? "../../resources/" : "../resources/",
-    FOOTER_ENGLISH_LINK: isEnglish
-      ? `./${entry.slug}`
+    // 記事ページからの相対パス。EN記事は en/ 配下のトップへ戻す。
+    FOOTER_NAV_LABEL: isEnglish ? "Site navigation" : "サイトナビゲーション",
+    FOOTER_HOME_LINK: "../",
+    FOOTER_HOME_LABEL: isEnglish ? "Home" : "ホーム",
+    FOOTER_NEWS_LINK: "../#news",
+    FOOTER_NEWS_LABEL: isEnglish ? "Notices" : "重要なお知らせ",
+    FOOTER_EVENTS_LINK: "../#events",
+    FOOTER_EVENTS_LABEL: isEnglish ? "Events" : "公演・イベント",
+    FOOTER_RESOURCES_LINK: "../resources/",
+    FOOTER_RESOURCES_LABEL: isEnglish ? "Resources" : "関連情報",
+    FOOTER_LANG_LINK: isEnglish
+      ? `../../${dirName}/${pair.ja.slug}`
       : `../en/${dirName}/${counterpart.slug}`,
+    FOOTER_LANG_LABEL: isEnglish ? "日本語" : "English",
     ARTICLE_BREADCRUMB: renderArticleBreadcrumb(entry, dirName, categories),
     FALLBACK_MARKDOWN: escapeScriptText(entry.body),
   };
